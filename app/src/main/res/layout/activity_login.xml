@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.LoginActivity"
+    android:background="@color/colorBackground">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/logo_image"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="20dp">
+
+       <EditText
+           android:layout_width="340dp"
+           android:layout_height="60dp"
+           android:layout_marginTop="50dp"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/edit_round"
+           android:drawableLeft="@drawable/ic_user"
+           android:drawableTint="@color/colorBackground"
+           android:drawablePadding="10dp"
+           android:paddingLeft="20dp"
+           android:hint="Enter login"
+           android:textSize="30dp"
+           android:textColor="@color/colorBackground"/>
+        <EditText
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/edit_round"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawableTint="@color/colorBackground"
+            android:drawablePadding="10dp"
+            android:paddingLeft="20dp"
+            android:hint="Enter password"
+            android:textSize="30dp"
+            android:textColor="@color/colorBackground"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_button"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="@color/colotWhite"
+        android:textSize="20sp"
+        android:layout_marginTop="600dp"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:layout_centerHorizontal="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="800dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="800dp" />
+    </FrameLayout>
+</RelativeLayout>
