@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="20dp">
+
+        <EditText
+            android:id="@+id/register_login_text_edit"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/edit_round"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorBackground"
+            android:hint="Enter login"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorBackground"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/register_email_text_edit"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/edit_round"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorBackground"
+            android:hint="Enter email"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorBackground"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/register_password_text_edit"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/edit_round"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorBackground"
+            android:hint="Enter password"
+            android:paddingLeft="20dp"
+            android:password="true"
+            android:textColor="@color/colorBackground"
+            android:textSize="30dp"
+            tools:ignore="Deprecated" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/button_background"
+        android:text="Register"
+        android:textColor="@color/colotWhite"
+        android:textSize="20sp" />
+
+</RelativeLayout>

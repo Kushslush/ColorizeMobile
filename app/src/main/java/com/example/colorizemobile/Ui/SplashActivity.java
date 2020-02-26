@@ -16,7 +16,7 @@ import com.example.colorizemobile.Utils.NetworkUtil;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private final int SPLASH_DELAY = 6000;
+    private final int SPLASH_DELAY = 600;
     private ProgressBar progressBar;
     private TextView textView;
     @Override

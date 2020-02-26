@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ui.LoginActivity"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".Ui.LoginActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -13,61 +13,33 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:src="@mipmap/logo_image"
-        />
+        android:src="@mipmap/logo_image" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="240dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="280dp"
-        app:cardBackgroundColor="@android:color/white"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:background="@color/colorBackground"
+        android:outlineAmbientShadowColor="@color/colorBackground">
 
-       <EditText
-           android:layout_width="340dp"
-           android:layout_height="60dp"
-           android:layout_marginTop="50dp"
-           android:layout_gravity="center_horizontal"
-           android:background="@drawable/edit_round"
-           android:drawableLeft="@drawable/ic_user"
-           android:drawableTint="@color/colorBackground"
-           android:drawablePadding="10dp"
-           android:paddingLeft="20dp"
-           android:hint="Enter login"
-           android:textSize="30dp"
-           android:textColor="@color/colorBackground"/>
-        <EditText
-            android:layout_width="340dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="130dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/edit_round"
-            android:drawableLeft="@drawable/ic_lock"
-            android:drawableTint="@color/colorBackground"
-            android:drawablePadding="10dp"
-            android:paddingLeft="20dp"
-            android:hint="Enter password"
-            android:textSize="30dp"
-            android:textColor="@color/colorBackground"/>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:background="@drawable/edit_button"
-        android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textColor="@color/colotWhite"
-        android:textSize="20sp"
-        android:layout_marginTop="600dp"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/colorBackground"
+            android:outlineSpotShadowColor="@color/colorBackground"
+            app:tabIndicatorColor="@color/colorBackground"
+            app:tabRippleColor="@color/colorBackground"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabTextColor="@color/colotWhite" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="800dp"
@@ -76,4 +48,11 @@
             app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="800dp" />
     </FrameLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 </RelativeLayout>
