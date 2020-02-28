@@ -8,20 +8,45 @@
 
 
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_navigation_menu"
-        android:background="@color/colorBackgroundLigth"
-        app:itemTextColor="@color/bottom_nav_color"
-        app:itemIconTint="@color/bottom_nav_color"
-        />
+        android:background="@color/colorBackground"
+        android:outlineAmbientShadowColor="@color/colorBackground">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/colorBackground"
+            android:outlineSpotShadowColor="@color/colorBackground"
+            app:tabIndicatorColor="@color/colorBackground"
+            app:tabRippleColor="@color/colorBackground"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabTextColor="@color/colotWhite" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fragment_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@id/bottom_navigation"/>-->
+
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
+        <!--android:id="@+id/bottom_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--app:menu="@menu/bottom_navigation_menu"-->
+        <!--android:background="@color/colorBackgroundLigth"-->
+        <!--app:itemTextColor="@color/bottom_nav_color"-->
+        <!--app:itemIconTint="@color/bottom_nav_color"-->
+        <!--/>-->
 </RelativeLayout>
